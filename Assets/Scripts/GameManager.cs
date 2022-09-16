@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Transform EndPos, FinalPos;
-    public GameObject PaticlFX;
+    public GameObject PaticlFX, Trophy, Instruction;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -18,12 +19,17 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
+        Invoke("TurnOffInst", 10);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void TurnOffInst()
+    {
+        Instruction.SetActive(false);
     }
 }
