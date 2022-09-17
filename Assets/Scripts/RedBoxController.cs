@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class BoxController : MonoBehaviour
+public class RedBoxController : MonoBehaviour
 {
     public Vector3 screenPoint;
     public Vector3 offset;
     public Vector3 startPos, initialPos;
+    public bool isReleased;
     
     private void Start()
     {
@@ -41,29 +42,32 @@ public class BoxController : MonoBehaviour
         {
             if (other.CompareTag("Exit"))
             {
-                //if (transform.name == "Red")
-                //{
-                //    print("red");
-                //    //transform.position = Vector3.Lerp(transform.position, GameManager.instance.EndPos.position, 0.1f);
-                //    transform.DOMove(GameManager.instance.EndPos.position, 1f);
-                //    transform.GetComponent<Rigidbody>().freezeRotation = false;
+                if (transform.name == "Red")
+                {
+                    isReleased = true;
+                    print("red");
+                    //transform.position = Vector3.Lerp(transform.position, GameManager.instance.EndPos.position, 0.1f);
+                    transform.DOMove(GameManager.instance.EndPos.position, 1f);
+                    transform.GetComponent<Rigidbody>().freezeRotation = false;
 
-                //    transform.GetComponent<Rigidbody>().isKinematic = true;
-                //    transform.GetComponent<Rigidbody>().useGravity = false;
-                //    transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    transform.GetComponent<Rigidbody>().isKinematic = true;
+                    transform.GetComponent<Rigidbody>().useGravity = false;
+                    transform.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 
-                //    StartCoroutine(FinalMove());
+                    StartCoroutine(FinalMove());
 
-                //    GameManager.instance.PaticlFX.SetActive(true);
-                //    transform.GetComponent<Collider>().enabled = false;
+                    GameManager.instance.PaticlFX.SetActive(true);
+                    transform.GetComponent<Collider>().enabled = false;
 
-                //    Invoke("Win", 4);
-                //}
-                //else
-                //{
-                //    //Invoke("Lose", 2);
-                //    print("Fail");
-                //}
+                    Invoke("Win", 4);
+                }
+                else
+                {
+                    //Invoke("Lose", 2);
+                    print("Fail");
+                }
+
+                
             }
         }
     }
@@ -76,10 +80,13 @@ public class BoxController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("Boundary") || 
-            collision.transform.CompareTag("Block") || collision.transform.CompareTag("Red"))
+        if (collision.transform.CompareTag("Boundary") && !isReleased)
         {
             transform.DOMove(initialPos, 0.5f);
+        }
+        if (collision.transform.CompareTag("Block"))
+        {
+            transform.DOMove(startPos, 0.5f);
         }
     }
 

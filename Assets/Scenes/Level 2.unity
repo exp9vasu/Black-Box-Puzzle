@@ -253,7 +253,7 @@ MonoBehaviour:
   screenPoint: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
   startPos: {x: 0, y: 0, z: 0}
-  OOB: 0
+  initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &47849533
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
   screenPoint: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
   startPos: {x: 0, y: 0, z: 0}
-  OOB: 0
+  initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &105277393
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +773,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 370584915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285634566}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: NextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &370584915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5810,7 +5822,7 @@ GameObject:
   - component: {fileID: 1009921818}
   - component: {fileID: 1009921817}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Instrucction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6329,7 +6341,7 @@ MonoBehaviour:
   screenPoint: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
   startPos: {x: 0, y: 0, z: 0}
-  OOB: 0
+  initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1206630655
 GameObject:
   m_ObjectHideFlags: 0
@@ -6667,6 +6679,8 @@ MonoBehaviour:
   FinalPos: {fileID: 1884424983}
   PaticlFX: {fileID: 1229429058}
   Trophy: {fileID: 1232436174}
+  Instruction: {fileID: 1009921815}
+  LevelCount: 0
 --- !u!4 &1285634567
 Transform:
   m_ObjectHideFlags: 0
@@ -6693,7 +6707,7 @@ GameObject:
   - component: {fileID: 1308993798}
   - component: {fileID: 1308993797}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: level No
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6738,9 +6752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'LEVEL 1
-
-'
+  m_text: LEVEL 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -6947,7 +6959,7 @@ MonoBehaviour:
   screenPoint: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
   startPos: {x: 0, y: 0, z: 0}
-  OOB: 0
+  initialPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1484729763
 GameObject:
   m_ObjectHideFlags: 0
@@ -7364,7 +7376,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1560681894}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1285634566}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ReloadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1560681894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7484,6 +7508,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584991228}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1739933869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739933870}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739933870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739933869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 540, y: 1716.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1825679513
 GameObject:
   m_ObjectHideFlags: 0
@@ -7808,7 +7862,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17880
+  m_Name: pb_Mesh17974
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8624,4 +8678,4 @@ MonoBehaviour:
   screenPoint: {x: 0, y: 0, z: 0}
   offset: {x: 0, y: 0, z: 0}
   startPos: {x: 0, y: 0, z: 0}
-  OOB: 0
+  initialPos: {x: 0, y: 0, z: 0}
