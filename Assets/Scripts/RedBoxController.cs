@@ -9,7 +9,7 @@ public class RedBoxController : MonoBehaviour
     public Vector3 offset;
     public Vector3 startPos, initialPos;
     public bool isReleased;
-    
+
     private void Start()
     {
         initialPos = transform.position;
@@ -59,6 +59,10 @@ public class RedBoxController : MonoBehaviour
                     GameManager.instance.PaticlFX.SetActive(true);
                     transform.GetComponent<Collider>().enabled = false;
 
+                    GameManager.instance.Trophy.SetActive(true);
+                    //int temp = PlayerPrefs.GetInt("Level");
+                    //PlayerPrefs.SetInt("Level", temp + 1);
+
                     Invoke("Win", 4);
                 }
                 else
@@ -67,7 +71,7 @@ public class RedBoxController : MonoBehaviour
                     print("Fail");
                 }
 
-                
+
             }
         }
     }

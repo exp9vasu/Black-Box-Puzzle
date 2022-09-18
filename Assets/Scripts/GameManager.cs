@@ -13,16 +13,17 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
-       
+
     }
 
     void Start()
     {
-        UIManager.instance.LevelCount.text = "LEVEL " + PlayerPrefs.GetInt("Level")+1.ToString();
+
+        print(SceneManager.GetActiveScene().buildIndex);
 
         Invoke("TurnOffInst", 8);
     }
@@ -30,7 +31,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        int temp = PlayerPrefs.GetInt("Level");
+        UIManager.instance.LevelCount.text = "LEVEL " + (temp + 1).ToString();
     }
 
     public void TurnOffInst()
@@ -40,13 +42,24 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        //PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level")+1);
-        //LevelCount = PlayerPrefs.GetInt("Level");
-        //PlayerPrefs.SetInt("Player", PlayerPrefs.GetInt("Level")+1);
+
+        if (SceneManager.GetActiveScene().buildIndex - 1 == SceneManager.sceneCount)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
+        LevelCount = PlayerPrefs.GetInt("Level");
+        //PlayerPrefs.SetInt("Player", PlayerPrefs.GetInt("Level") + 1);
     }
     public void ReloadLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
     }
 }

@@ -26,6 +26,6 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LevelCount.text = "LEVEL " + PlayerPrefs.GetInt("Level").ToString();
+        //LevelCount.text = "LEVEL " + PlayerPrefs.GetInt("Level").ToString();
     }
 }
