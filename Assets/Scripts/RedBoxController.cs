@@ -59,7 +59,7 @@ public class RedBoxController : MonoBehaviour
                     GameManager.instance.PaticlFX.SetActive(true);
                     transform.GetComponent<Collider>().enabled = false;
 
-                    GameManager.instance.Trophy.SetActive(true);
+                    //GameManager.instance.Trophy.SetActive(true);
                     //int temp = PlayerPrefs.GetInt("Level");
                     //PlayerPrefs.SetInt("Level", temp + 1);
 
