@@ -8,7 +8,7 @@ public class Ballcontroller : MonoBehaviour
 
     //public EnemyController enemyController;
 
-    private float thrust = 40f;
+    private float thrust = 200f;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float wallDistance = 5f;
     [SerializeField] private float minCamDistance = 3f;
