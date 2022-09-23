@@ -6,24 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Color Bump/Scenes/Box Puzzle 1.unity
-    guid: 72dad427711a55a43a368ccff472f002
-  - enabled: 0
     path: Assets/Scenes/Level 1.unity
     guid: 667fb0059af6f984d8db42ea21501872
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 5b70c5566accb6c459ee59a6d9fe56c1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level 3.0.unity
     guid: ebf02b88f1c08e54a8c3868054d8ebba
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level 3.1.unity
     guid: fbcb02585f8b9c04fa913bbfaa32ef9f
-  - enabled: 0
-    path: Assets/Scenes/Level 4.unity
-    guid: be78441921a1632469dfd13dea992afe
-  - enabled: 0
-    path: Assets/Scenes/Level 5.unity
-    guid: 55d49b4785e07754d99a7bd0b2556a78
+  - enabled: 1
+    path: Assets/Scenes/Level 3.2.unity
+    guid: 00ccf0a7add00424a94917c499340001
+  - enabled: 1
+    path: Assets/Scenes/Level 3.3.unity
+    guid: 4592fa5b586e4c147ab2cb96f3ef36e5
+  - enabled: 1
+    path: Assets/Scenes/Level 3.4.unity
+    guid: e456d0545c39c984a96422b93be31b90
+  - enabled: 1
+    path: Assets/Scenes/Level 3.5.unity
+    guid: 87d36fd7ca2a8c04db50a50f083b27ad
   m_configObjects: {}

@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     {
         int temp = PlayerPrefs.GetInt("Level");
         UIManager.instance.LevelCount.text = "LEVEL " + (temp + 1).ToString();
+
+        print(SceneManager.GetActiveScene().buildIndex + "Level");
     }
 
     public void TurnOffInst()
@@ -43,7 +45,7 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
 
-        if (SceneManager.GetActiveScene().buildIndex - 1 == SceneManager.sceneCount)
+        if (SceneManager.GetActiveScene().buildIndex  >= 7)
         {
             SceneManager.LoadScene(0);
         }
