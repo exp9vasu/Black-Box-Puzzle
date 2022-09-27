@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        print(SceneManager.GetActiveScene().buildIndex);
+        //print(SceneManager.GetActiveScene().buildIndex);
 
         Invoke("TurnOffInst", 8);
     }
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         int temp = PlayerPrefs.GetInt("Level");
         UIManager.instance.LevelCount.text = "LEVEL " + (temp + 1).ToString();
 
-        print(SceneManager.GetActiveScene().buildIndex + "Level");
+        //print(SceneManager.GetActiveScene().buildIndex + "Level");
     }
 
     public void TurnOffInst()
