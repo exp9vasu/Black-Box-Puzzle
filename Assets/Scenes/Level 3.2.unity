@@ -397,6 +397,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105277393}
   m_CullTransparentMesh: 1
+--- !u!1 &106344185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8805810604987764301, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
+  m_PrefabInstance: {fileID: 462053518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &106344187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106344185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8077115cb238af049b1c0b5e3168bdbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  wallDistance: 5
+  minCamDistance: 3
+  onObject: 0
+  isReleased: 0
+  RivalBall: {fileID: 0}
 --- !u!1 &212688144
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +465,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
@@ -655,7 +678,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8805810604987764297, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8805810604987764297, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -721,7 +744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8805810604987764297, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8805810604987764297, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
       propertyPath: m_LocalScale.x
@@ -791,7 +814,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4039032767750308978, guid: acbb66b1141ee554f847f335482f62a2, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4039032767750308978, guid: acbb66b1141ee554f847f335482f62a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -994,7 +1017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8805810604987764297, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8805810604987764297, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1040,7 +1063,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
 --- !u!4 &462053519 stripped
 Transform:
@@ -1228,7 +1252,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
@@ -1402,7 +1426,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
@@ -2377,7 +2401,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
@@ -2664,7 +2688,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4039032767750308978, guid: acbb66b1141ee554f847f335482f62a2, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4039032767750308978, guid: acbb66b1141ee554f847f335482f62a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4276,7 +4300,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4039032767750308978, guid: acbb66b1141ee554f847f335482f62a2, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4039032767750308978, guid: acbb66b1141ee554f847f335482f62a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4408,7 +4432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8805810604987764297, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8805810604987764297, guid: 8efdae3631ea2514da3a6a4d9467bf21, type: 3}
       propertyPath: m_LocalScale.x
@@ -4642,7 +4666,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
