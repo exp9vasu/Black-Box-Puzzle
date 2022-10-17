@@ -2,14 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class NewBoxMovement : MonoBehaviour
 {
     public bool isReleased;
+
+    private void Start()
+    {
+        
+    }
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.collider.transform.position.x+0.1 <= transform.position.x || collision.collider.transform.position.x -0.01 > transform.position.x)
+        {
+            return;
+        }
+
         if (collision.collider.CompareTag("Exit"))
         {
+            
             isReleased = true;
             print("red");
             //transform.position = Vector3.Lerp(transform.position, GameManager.instance.EndPos.position, 0.1f);

@@ -174,9 +174,9 @@ GameObject:
   - component: {fileID: 4039032767750308977}
   - component: {fileID: 4039032767750308976}
   - component: {fileID: 4039032767750308982}
-  - component: {fileID: -2868234769331378240}
   - component: {fileID: -4512302429286866337}
   - component: {fileID: 1938011690042577120}
+  - component: {fileID: 5689614415019722304}
   m_Layer: 0
   m_Name: Yellow
   m_TagString: Block
@@ -266,19 +266,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &-2868234769331378240
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4039032767750308981}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-4512302429286866337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,6 +318,20 @@ MonoBehaviour:
   onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
+--- !u!136 &5689614415019722304
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039032767750308981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4039032767928011954
 GameObject:
   m_ObjectHideFlags: 0

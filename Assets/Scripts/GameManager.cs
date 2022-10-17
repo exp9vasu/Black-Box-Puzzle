@@ -17,14 +17,15 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+        else
+        {
+            Destroy(this);
+        }
 
     }
 
     void Start()
     {
-
-        //print(SceneManager.GetActiveScene().buildIndex);
-
         Invoke("TurnOffInst", 8);
     }
 
