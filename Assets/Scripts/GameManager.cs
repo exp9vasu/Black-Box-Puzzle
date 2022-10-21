@@ -17,15 +17,24 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        else
-        {
-            Destroy(this);
-        }
+        //else
+        //{
+        //    Destroy(this);
+        //}
 
     }
 
     void Start()
     {
+        print(PlayerPrefs.GetInt("LevelIndex"));
+        print("SCene Count" + SceneManager.sceneCountInBuildSettings);
+        print(SceneManager.GetActiveScene().buildIndex);
+
+        if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt("LevelIndex"))
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetInt("LevelIndex"));
+        }
+
         Invoke("TurnOffInst", 8);
     }
 
@@ -45,19 +54,20 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        LevelCount = PlayerPrefs.GetInt("Level");
+        PlayerPrefs.SetInt("Level", LevelCount + 1);
 
-        if (SceneManager.GetActiveScene().buildIndex  >= 7)
+        if (SceneManager.GetActiveScene().buildIndex  >= SceneManager.sceneCountInBuildSettings-1)
         {
             SceneManager.LoadScene(0);
+            PlayerPrefs.SetInt("LevelIndex", 0);
         }
         else
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+            PlayerPrefs.SetInt("LevelIndex", SceneManager.GetActiveScene().buildIndex + 1);
 
-        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
-        LevelCount = PlayerPrefs.GetInt("Level");
-        //PlayerPrefs.SetInt("Player", PlayerPrefs.GetInt("Level") + 1);
+        }
     }
     public void ReloadLevel()
     {
