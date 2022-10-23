@@ -22,7 +22,7 @@ public class NewBoxMovement : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.transform.position.x+0.1 <= transform.position.x || collision.collider.transform.position.x -0.01 > transform.position.x)
+        if (collision.collider.transform.position.x+0.1 <= transform.position.x || collision.collider.transform.position.x -0.1 > transform.position.x)
         {
             return;
         }
@@ -65,5 +65,18 @@ public class NewBoxMovement : MonoBehaviour
         transform.GetComponent<Collider>().enabled = false;
 
         Invoke("Win", 4);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.position.x + 0.1 <= transform.position.x || other.transform.position.x - 0.1 > transform.position.x)
+        {
+            return;
+        }
+
+        if (other.CompareTag("Exit"))
+        {
+            ReleaseBox();
+        }
     }
 }
