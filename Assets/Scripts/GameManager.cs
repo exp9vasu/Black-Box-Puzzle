@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex  >= SceneManager.sceneCountInBuildSettings-1)
         {
-            SceneManager.LoadScene(0);
-            PlayerPrefs.SetInt("LevelIndex", 0);
+            SceneManager.LoadScene(1);
+            PlayerPrefs.SetInt("LevelIndex", 1);
         }
         else
         {
