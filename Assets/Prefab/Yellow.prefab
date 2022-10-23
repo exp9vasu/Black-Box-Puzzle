@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 4039032767750308982}
   - component: {fileID: -4512302429286866337}
   - component: {fileID: 1938011690042577120}
-  - component: {fileID: 5689614415019722304}
+  - component: {fileID: 1093547236415842048}
   m_Layer: 0
   m_Name: Yellow
   m_TagString: Block
@@ -318,8 +318,8 @@ MonoBehaviour:
   onSelectedSelectFingerUp:
     m_PersistentCalls:
       m_Calls: []
---- !u!136 &5689614415019722304
-CapsuleCollider:
+--- !u!65 &1093547236415842048
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -328,9 +328,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4039032767928011954
 GameObject:
