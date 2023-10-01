@@ -1,18 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
 
-public class UIHand : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+using System;
+
+
+    
     {
-        
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            Console.WriteLine("Enter a number");
+
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            long fact = GetFactorial(number);
+
+            Console.WriteLine("{0} factorial is {1}", number, fact);           
+
+            Console.ReadKey();
+
+        }
+
+ 
+
+        private static long GetFactorial(int number)
+
+        {          
+
+            if (number == 0)
+
+            {
+
+                return 1;
+
+            }
+
+            return number * GetFactorial(number-1);
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position = Input.mousePosition;
-    }
 }
+
